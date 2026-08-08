@@ -89,11 +89,21 @@ a {
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.35rem;
   letter-spacing: -0.03em;
   color: var(--ink);
+}
+
+.logo img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.55rem;
+  flex-shrink: 0;
 }
 
 .nav {
@@ -169,6 +179,15 @@ a {
   align-items: center;
 }
 
+.hero__logo {
+  width: clamp(4.5rem, 10vw, 5.75rem);
+  height: auto;
+  border-radius: 1rem;
+  margin: 0 0 1rem;
+  animation: riseIn 0.9s var(--ease) both;
+  filter: drop-shadow(0 10px 24px rgba(26, 26, 26, 0.18));
+}
+
 .hero__brand {
   font-family: var(--font-display);
   font-weight: 700;
@@ -176,7 +195,7 @@ a {
   line-height: 0.9;
   letter-spacing: -0.05em;
   margin: 0 0 1.25rem;
-  animation: riseIn 0.9s var(--ease) both;
+  animation: riseIn 0.9s 0.05s var(--ease) both;
 }
 
 .hero__headline {
@@ -522,10 +541,20 @@ a {
 }
 
 .footer__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   font-family: var(--font-display);
   font-weight: 600;
   color: var(--paper);
   opacity: 1;
+}
+
+.footer__brand img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.45rem;
+  flex-shrink: 0;
 }
 
 /* Modal */
@@ -664,6 +693,11 @@ body.modal-open {
 
   .hero__art img {
     width: min(72vw, 18rem);
+  }
+
+  .hero__logo {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero__brand {
